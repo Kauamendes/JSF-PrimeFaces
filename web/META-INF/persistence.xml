@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <!-- Define persistence unit -->
+  <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
+    <mapping-file>META-INF/consultas.xml</mapping-file>
+    <class>modelo.basico.Usuario</class>
+    <class>modelo.basico.Produto</class>
+    <class>modelo.umpraum.Assento</class>
+    <class>modelo.umpraum.Cliente</class>
+    <class>modelo.UmParaMuitos.ItemPedido</class>
+    <class>modelo.UmParaMuitos.Pedido</class>
+    <class>modelo.muitospramuitos.Tio</class>
+    <class>modelo.muitospramuitos.Sobrinho</class>
+    <class>modelo.muitospramuitos.Ator</class>
+    <class>modelo.muitosparamuitos.Filmes</class>
+    <class>modelo.composicao.Endereco</class>
+    <class>modelo.composicao.Funcionario</class>
+    <class>modelo.composicao.Fornecedor</class>
+    <class>modelo.heranca.tipo2.Aluno</class>
+    <class>modelo.heranca.tipo2.AlunoBolsista</class>
+    <class>consulta.Medico</class>
+    <class>consulta.Paciente</class>
+    <class>modelo.umpramuitos.Album</class>
+    <class>modelo.umpramuitos.Artista</class>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/curso_cod3r"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.password" value="branet1701"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.archive.autodetection" value="class, hbm"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <!-- Show SQL in console -->
+      <property name="hibernate.format_sql" value="true"/>
+      <!-- Show SQL formatted -->
+    </properties>
+  </persistence-unit>
+</persistence>
